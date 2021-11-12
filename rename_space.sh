@@ -16,7 +16,7 @@ do
     then
 # Если код завершения 0, переименовываем
       fname=$filename
-      n='echo $fname | sed -e "s/ /_/d"'
+      n=`echo $fname | sed -e "s/ /_/g"`
       let "num += 1"
       mv "$fname" "$n"
     fi
